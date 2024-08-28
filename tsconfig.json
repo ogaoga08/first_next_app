@@ -17,8 +17,10 @@
         "name": "next"
       }
     ],
+    "baseUrl": ".",
     "paths": {
-      "@/*": ["./src/*"]
+      "@/styles/*": ["styles/*"], //stylesフォルダのエイリアスを追加
+      "@/utils/*": ["utils/*"] //utilsフォルダの追加
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/app/Home/page.jsx"],

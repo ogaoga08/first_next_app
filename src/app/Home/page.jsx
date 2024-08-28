@@ -1,12 +1,12 @@
 "use client";
 
 import { useState } from "react";
-import "./globals.css";
-import { Header } from "./components/Header";
-import { Cattle } from "./components/Cattle";
-import { Navigation } from "./components/Navigation";
-import { Modal } from "./components/Modal";
-import { SearchBar } from "./components/SearchBar";
+import "../styles/globals.css";
+import { Header } from "../components/Header";
+import { Cattle } from "../components/Cattle";
+import { Navigation } from "../components/Navigation";
+import { Modal } from "../components/Modal";
+import { SearchBar } from "../components/SearchBar";
 
 const list = [
   {
