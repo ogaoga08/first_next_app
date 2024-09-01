@@ -1,7 +1,12 @@
 "use client";
 
-export const Header = (props) => {
-  const { openModal } = props;
+import React from 'react';
+
+interface HeaderProps {
+  openModal: () => void;
+}
+
+export const Header: React.FC<HeaderProps> = ({ openModal }) => {
   return (
     <header>
       <div className="header">
