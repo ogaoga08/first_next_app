@@ -6,7 +6,7 @@ interface HeaderProps {
   openModal: () => void;
 }
 
-export const Header: React.FC<HeaderProps> = ({ openModal }) => {
+const Header: React.FC<HeaderProps> = ({ openModal }) => {
   return (
     <header>
       <div className="header">
@@ -16,3 +16,5 @@ export const Header: React.FC<HeaderProps> = ({ openModal }) => {
     </header>
   );
 };
+
+export default Header;

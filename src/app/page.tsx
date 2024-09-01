@@ -2,11 +2,11 @@
 
 import { useState } from "react";
 // import "../styles/globals.css";
-import { Header } from "../components/Header";
-import { Cattle } from "../components/Cattle";
-import { Navigation } from "../components/Navigation";
-import { Modal } from "../components/Modal";
-import { SearchBar } from "../components/SearchBar";
+import  Header  from "./components/Header";
+import { Cattle } from "./components/Cattle";
+import { Navigation } from "./components/Navigation";
+import { Modal } from "./components/Modal";
+import { SearchBar } from "./components/SearchBar";
 
 interface MeatName {
   name: string;
