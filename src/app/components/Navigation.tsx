@@ -1,6 +1,18 @@
 "use client";
 
-export const Navigation = (props) => {
+import React from 'react';
+
+interface NavigationProps {
+  currentLevel: number;
+  currentIndex: number | null;
+  currentSubIndex: number | null;
+  currentReserveIndex: number | null;
+  handleButtonClick: (index: number) => void;
+  list: Array<any>;
+  ratingStar: (value: number) => JSX.Element;
+}
+
+export const Navigation: React.FC<NavigationProps> = (props) => {
   const {
     currentLevel,
     currentIndex,
@@ -10,6 +22,7 @@ export const Navigation = (props) => {
     list,
     ratingStar,
   } = props;
+
   const displayButtons = () => {
     if (currentLevel === 0) {
       return list.map((categoryChoice, index) => (
@@ -43,7 +56,7 @@ export const Navigation = (props) => {
       currentIndex !== null
     ) {
       const detailChoice =
-        list[currentIndex].places[currentSubIndex].names[currentReserveIndex];
+        list[currentIndex].places[currentSubIndex].names[currentReserveIndex!];
       return (
         <div className="description-area">
           <h1>{detailChoice.name}</h1>
@@ -57,5 +70,6 @@ export const Navigation = (props) => {
       );
     }
   };
+
   return <>{displayButtons()}</>;
 };

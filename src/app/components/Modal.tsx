@@ -1,12 +1,20 @@
 "use client";
 
-export const Modal = (props) => {
+import React from 'react';
+
+interface ModalProps {
+  show: boolean;
+  closeModal: () => void;
+}
+
+export const Modal: React.FC<ModalProps> = (props) => {
   const { show, closeModal } = props;
+
   const modalArea = () => {
     if (show) {
       return (
         <>
-        <div id="overlay" onClick={closeModal}></div>
+          <div id="overlay" onClick={closeModal}></div>
           <div className="modal-area show">
             <div id="content">
               <ul>
