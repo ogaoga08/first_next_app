@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 // import "../styles/globals.css";
-import  Header  from "./components/Header";
+import  Header  from "./components/Header.tsx";
 import { Cattle } from "./components/Cattle";
 import { Navigation } from "./components/Navigation";
 import { Modal } from "./components/Modal";

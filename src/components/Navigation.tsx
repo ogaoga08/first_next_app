@@ -31,7 +31,7 @@ export const Navigation: React.FC<NavigationProps> = (props) => {
         </button>
       ));
     } else if (currentLevel === 1 && currentIndex !== null) {
-      return list[currentIndex].places.map((placeChoice, index) => (
+      return list[currentIndex].places.map((placeChoice: any, index: number) => (
         <button key={index} onClick={() => handleButtonClick(index)}>
           {placeChoice.place}
         </button>
@@ -42,7 +42,7 @@ export const Navigation: React.FC<NavigationProps> = (props) => {
       currentIndex !== null
     ) {
       return list[currentIndex].places[currentSubIndex].names.map(
-        (nameChoice, index) => (
+        (nameChoice: any, index: number) => (
           <div key={index}>
             <button key={index} onClick={() => handleButtonClick(index)}>
               {nameChoice.name}
